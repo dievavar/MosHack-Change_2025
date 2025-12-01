@@ -67,7 +67,6 @@ https://hub.mos.ru/solmath/moshack-change_2025
 
 </div>
 
-### Главный экран
 | Главная страница | Возможности сервиса |
 |:---:|:---:|
 | <img src="./screenshots/1.png" width="95%" alt="Главная страница"/> | <img src="./screenshots/2.png" width="95%" alt="Возможности сервиса"/> |
