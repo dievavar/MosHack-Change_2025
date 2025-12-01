@@ -59,6 +59,13 @@ https://www.figma.com/design/Jn1VWKOEAtMGraYBb4I0Uq/Hostus-Pocus?node-id=0-1&t=9
 
 ## Демонстрация интерфейса
 
+<div align="center">
+
+![Анализатор тональности в действии](./screenshots/optimized.gif)
+*Загрузка данных → Анализ → Визуализация результатов*
+
+</div>
+
 ### Главный экран
 | Главная страница | Возможности сервиса |
 |:---:|:---:|
