@@ -35,12 +35,6 @@ https://hub.mos.ru/solmath/moshack-change_2025
 - код подготовки данных,
 - весь backend и frontend.
 
-### Видео и дополнительные материалы
-https://drive.google.com/drive/folders/1-IQqdbQBBiLeVRH2WdiW18XNeTHRztrc?usp=sharing
-
-### Ссылка на сайт (только фронт работает, не успели поднять бэк) 
-https://cy133527.tw1.ru/index.html
-
 ### Созданный прототип в фигме  
 https://www.figma.com/design/Jn1VWKOEAtMGraYBb4I0Uq/Hostus-Pocus?node-id=0-1&t=9ks20lZBQVufTpEp-1
 
@@ -211,7 +205,7 @@ python notebooks/preprocess.py
 Запуск:
 
 ```bash
-uvicorn backend.app_bert:app_bert --reload
+uvicorn backend.app:app--reload
 ```
 
 Документация:
@@ -235,32 +229,5 @@ uvicorn backend.app_bert:app_bert --reload
 | TF-IDF + LinearSVC                                  | baseline.ipynb                               | 0.5997   |
 
 ---
-
-## Команда проекта: MoodWare
-
-**Финансовый университет при Правительстве РФ, 3 курс**
-
-### Участники
-
-#### Диева Варвара
-
-* дизайн и разработка интерфейса,
-* участие в обучении модели
-  GitHub: [https://github.com/dievavar](https://github.com/dievavar)
-  Telegram: @dievavar
-
-#### Лихолетов Георгий
-
-* backend, API, деплой
-  GitHub: [https://github.com/FreEFreeZy](https://github.com/FreEFreeZy)
-  Telegram: @freefreezy
-
-#### Шалашова Ольга
-
-* исследование моделей BERT,
-* обучение и оценка качества,
-* подготовка данных
-  GitHub: [https://github.com/shalashova-olga](https://github.com/shalashova-olga)
-  Telegram: @olya_shalashova
 
 
