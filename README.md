@@ -40,6 +40,33 @@ https://www.figma.com/design/Jn1VWKOEAtMGraYBb4I0Uq/Hostus-Pocus?node-id=0-1&t=9
 
 ---
 
+##  Интерфейс
+
+<div align="center">
+
+### Главная страница
+<img src="./screenshots/1.png" width="80%" "/>
+### Возможности сервиса 
+<img src="./screenshots/2.png" width="80%""/>
+### Техническая реализация
+<img src="./screenshots/3.png" width="80%""/>
+### Команда проекта
+<img src="./screenshots/4.png" width="80%""/>
+### Переходим к анализу 
+<img src="./screenshots/4.png" width="80%""/>
+### Страница анализа
+<img src="./screenshots/2.1.png" width="80%""/>
+### Результаты анализа
+<img src="./screenshots/2.2.png" width="80%""/>
+### Визуализация результата 
+<img src="./screenshots/2.3.png" width="80%""/>
+<img src="./screenshots/2.4.png" width="80%""/>
+### Проверка метрики F1-macro
+<img src="./screenshots/2.5.png" width="80%""/>
+</div>
+
+---
+
 ## Датасет
 
 Исходные файлы:
