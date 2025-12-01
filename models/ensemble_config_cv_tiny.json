@@ -1,0 +1,11 @@
+{
+  "bert_model_dir": "../models/rurorberta_base_manual",
+  "lr_model_path": "../models/sentiment_lr_optuna.joblib",
+  "bert_weight": 0.15000000000000002,
+  "lr_weight": 0.85,
+  "num_labels": 3,
+  "max_len": 192,
+  "batch_size": 32,
+  "n_splits": 5,
+  "cv_f1_macro": 0.8898995899307085
+}
