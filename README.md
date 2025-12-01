@@ -42,7 +42,7 @@
 
 ## Ссылки
 
-### Основной репозиторий
+### Основной репозиторий на mos.hub
 https://hub.mos.ru/solmath/moshack-change_2025
 
 Содержит:
@@ -248,18 +248,9 @@ python notebooks/preprocess.py
 
 ### 6. Запуск backend
 
-В `backend/model/` должны лежать:
-
-* config.json
-* pytorch_model.bin
-* файлы токенизатора
-
-Запуск:
-
 ```bash
 uvicorn backend.app:app--reload
 ```
-
 Документация:
 
 * Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
