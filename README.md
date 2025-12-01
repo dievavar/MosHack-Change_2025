@@ -88,9 +88,8 @@ https://hub.mos.ru/solmath/moshack-change_2025
 |:---:|:---:|
 | <img src="./screenshots/2.3.png" width="95%" alt="Визуализация 1"/> <br> <img src="./screenshots/2.4.png" width="95%" alt="Визуализация 2"/> | <img src="./screenshots/2.5.png" width="95%" alt="Метрики"/> |
 | *Графики и диаграммы* | *Оценка качества модели* |
-
 </div>
----
+
 
 ## Датасет
 
