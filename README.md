@@ -40,31 +40,34 @@ https://www.figma.com/design/Jn1VWKOEAtMGraYBb4I0Uq/Hostus-Pocus?node-id=0-1&t=9
 
 ---
 
-##  Интерфейс
-
 <div align="center">
 
-### Главная страница
-<img src="./screenshots/1.png" width="80%" "/>
-### Возможности сервиса 
-<img src="./screenshots/2.png" width="80%""/>
-### Техническая реализация
-<img src="./screenshots/3.png" width="80%""/>
-### Команда проекта
-<img src="./screenshots/4.png" width="80%""/>
-### Переходим к анализу 
-<img src="./screenshots/4.png" width="80%""/>
-### Страница анализа
-<img src="./screenshots/2.1.png" width="80%""/>
-### Результаты анализа
-<img src="./screenshots/2.2.png" width="80%""/>
-### Визуализация результата 
-<img src="./screenshots/2.3.png" width="80%""/>
-<img src="./screenshots/2.4.png" width="80%""/>
-### Проверка метрики F1-macro
-<img src="./screenshots/2.5.png" width="80%""/>
-</div>
+## Демонстрация интерфейса
 
+### Главный экран
+| Главная страница | Возможности сервиса |
+|:---:|:---:|
+| <img src="./screenshots/1.png" width="95%" alt="Главная страница"/> | <img src="./screenshots/2.png" width="95%" alt="Возможности сервиса"/> |
+| *Стартовый экран приложения* | *Описание функциональности* |
+
+| Техническая реализация | Команда проекта |
+|:---:|:---:|
+| <img src="./screenshots/3.png" width="95%" alt="Техническая реализация"/> | <img src="./screenshots/4.png" width="95%" alt="Команда проекта"/> |
+| *Архитектура решения* | *Наша команда разработчиков* |
+
+## Процесс анализа
+
+| Страница анализа | Результаты анализа |
+|:---:|:---:|
+| <img src="./screenshots/2.1.png" width="95%" alt="Страница анализа"/> | <img src="./screenshots/2.2.png" width="95%" alt="Результаты анализа"/> |
+| *Интерфейс загрузки данных* | *Таблица с результатами* |
+
+| Визуализация результатов | Проверка метрик |
+|:---:|:---:|
+| <img src="./screenshots/2.3.png" width="95%" alt="Визуализация 1"/> <br> <img src="./screenshots/2.4.png" width="95%" alt="Визуализация 2"/> | <img src="./screenshots/2.5.png" width="95%" alt="Метрики"/> |
+| *Графики и диаграммы* | *Оценка качества модели* |
+
+</div>
 ---
 
 ## Датасет
