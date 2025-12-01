@@ -1,23 +1,15 @@
 import random
 import re
-
 import pandas as pd
 
 VAL_SIZE     = 0.1
 RANDOM_STATE = 42
-
-# максимум примеров на один источник (src). Если не хочешь урезать — поставь None
 MAX_SAMPLES_PER_SRC = 20000
-
-# максимум длины текста в символах, всё длиннее будем УКРАЩАТЬ, а не выкидывать
 MAX_TEXT_LEN = 1200
-
 # MAX_TOTAL_SAMPLES = 120000
-
-# сколько максимум аугментаций на один исходный текст класса
 MAX_AUG_PER_SAMPLE = 2
 
-# ------------------ регулярки для очистки базовые ------------------ #
+#регулярки для очистки
 URL_RE        = re.compile(r"(https?://\S+|www\.\S+)")
 EMAIL_RE      = re.compile(r"\b[\w\.-]+@[\w\.-]+\.\w+\b")
 PHONE_RE      = re.compile(r"\b(\+?\d[\d\-\s]{6,}\d)\b")
@@ -40,7 +32,7 @@ RATING_RE2 = re.compile(r"\b(\d{1,2})\s*/\s*10\b")
 # латиница для детекции английского
 LATIN_RE = re.compile(r"[A-Za-z]")
 
-# эмодзи-группы (можно расширять по мере надобности)
+# эмодзи-группы 
 EMOJI_MAP = [
     (re.compile(r"[😊🙂😀😁😄😃]"), " [SMILE] "),
     (re.compile(r"[😂🤣]"), " [LAUGH] "),
@@ -215,7 +207,7 @@ def clean_text(text: str) -> str:
     return text
 
 
-# --------- укорочение длинных текстов по предложениям --------- #
+#укорочение длинных текстов по предложениям
 
 def sentence_has_signal(sent: str) -> bool:
     """Проверяем, есть ли в предложении 'ударные' токены/слова."""
