@@ -62,6 +62,7 @@ https://hub.mos.ru/solmath/moshack-change_2025
 <div align="center">
 
 ![Анализатор тональности в действии](./screenshots/optimized.gif)
+
 *Загрузка данных → Анализ → Визуализация результатов*
 
 </div>
