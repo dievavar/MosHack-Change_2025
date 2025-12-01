@@ -1,0 +1,94 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f7f7f8;
+  color: #414141;
+}
+
+/* Картинки по умолчанию адекватно ведут себя в макете */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Общий контейнер страницы */
+.page {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Если ты используешь main-контент как .page__features */
+.page__features {
+  flex: 1;               /* занимает всё оставшееся место по высоте */
+  display: flex;
+  align-items: center;   /* центр по вертикали */
+}
+
+/* Опционально: общий класс для секций */
+.section {
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+main > section {
+  /* базовые отступы сверху и снизу секций */
+  padding: 100px 0;
+}
+
+/* каждая следующая секция отстоит от предыдущей */
+main > section + section {
+  margin-top: 80px;
+}
+
+#about {
+  scroll-margin-top: -100px; /* подгони под высоту хедера */
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+/* кнопка "наверх" */
+.scroll-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #a8002c;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(168, 0, 44, 0.3);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* когда видима */
+.scroll-top--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+

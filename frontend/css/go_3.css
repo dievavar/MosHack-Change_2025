@@ -1,0 +1,99 @@
+/* Вся секция */
+.cta-section {
+  padding: 80px 40px 40px;
+}
+
+.cta-section__bg {
+  position: relative;
+  background: #b6ccfc;
+  min-height: 260px;
+  border-radius: 8px;
+  overflow: visible;   /* чтобы ничего не резалось */
+  width: 100%;
+}
+
+/* Контент (текст + кнопка) */
+.cta-section__content {
+  position: relative;
+  z-index: 2;          /* выше фона и ниже картинок не обязательно, но можно */
+  max-width: 700px;
+  margin-left: 470px;  /* сдвиг блока текста вправо/влево – подбери число */
+  padding: 60px 40px 60px 0;
+  text-align: left;
+}
+
+.cta-section__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #212121;
+}
+
+.cta-section__subtitle {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #212121;
+  margin-bottom: 32px;
+
+  max-width: 600px;   /* ширина как в фигме */
+  width: 600px;       /* фикс, чтобы текст переносился стабильно */
+  white-space: normal;
+}
+
+/* Кнопка */
+.cta-section__btn {
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  background: #a8002c;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cta-section__btn-arrow {
+  display: inline-block;
+  width: 24px;
+  height: 1.5px;
+  border-top: 1px solid #ffffff;
+  position: relative;
+}
+
+.cta-section__btn-arrow::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+/* Велосипед — слева, выступает */
+.cta-section__bike {
+  position: absolute;
+  z-index: 3;      /* над синим блоком */
+  left: -140px;    /* выходит за фон */
+  bottom: -20px;   /* немного вниз */
+  height: 350px;   /* размер картинки, можешь увеличить/уменьшить */
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Стрелка — справа сверху */
+.cta-section__arrow {
+  position: absolute;
+  z-index: 3;      /* над синим блоком */
+  right: 40px;
+  top: -50px;      /* стрелка вылетает вверх */
+  width: 220px;    /* размер стрелки */
+  object-fit: contain;
+  pointer-events: none;
+}

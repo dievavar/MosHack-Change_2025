@@ -1,0 +1,364 @@
+/* Секция-маска */
+.team-section {
+  position: relative;
+  padding: 80px 0 0;   /* верхний отступ, снизу убрали лишнее */
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+/* ЦЕНТРАЛЬНАЯ ПОДЛОЖКА */
+.team-panel {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1252px;
+  margin: 0 auto;
+
+  background: #ffffff;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 30px 30px rgba(197, 197, 197, 0.2);
+  overflow: hidden;
+  min-height: 600px;
+}
+
+
+.team-card {
+  display: flex;
+  align-items: flex-start;        /* вместо center, чтобы тянулась по высоте */
+  gap: 20px;
+  padding: 20px 24px;
+  border-radius: 20px;
+
+  border: 1px solid #e5e7eb;      /* рамка */
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+
+  margin-bottom: 16px;            /* чтобы следующая картинка не прилипала снизу */
+}
+
+/* внутренности панели: заголовок + три карточки */
+.team-panel__content {
+  padding: 64px 80px 260px;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f7f7f8;
+  color: #414141;
+}
+
+/* Картинки по умолчанию адекватно ведут себя в макете */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Общий контейнер страницы */
+.page {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Если ты используешь main-контент как .page__features */
+.page__features {
+  flex: 1;               /* занимает всё оставшееся место по высоте */
+  display: flex;
+  align-items: center;   /* центр по вертикали */
+}
+
+/* Опционально: общий класс для секций */
+.section {
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+main > section {
+  /* базовые отступы сверху и снизу секций */
+  padding: 100px 0;
+}
+
+/* каждая следующая секция отстоит от предыдущей */
+main > section + section {
+  margin-top: 80px;
+}
+
+#about {
+  scroll-margin-top: -100px; /* подгони под высоту хедера */
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+/* кнопка "наверх" */
+.scroll-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #a8002c;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(168, 0, 44, 0.3);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* когда видима */
+.scroll-top--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+.team-side-image,
+.team-extra-image {
+  z-index: 1;
+}
+/* головы и подзаголовок */
+.team-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team-panel__wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;       /* прямо к нижнему краю панели */
+  width: 100%;
+  height: 90px;    /* высота волны, можно менять */
+  display: block;
+}
+
+/* Заливаем волну цветом фона секции */
+.team-panel__wave path {
+  fill: #f6f6f6;   /* совпадает с нижней частью градиента .team-section */
+}
+
+
+.team-header__title {
+  margin: 0 0 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #212121;
+}
+
+.team-header__brand {
+  font-weight: 700;
+}
+
+.team-header__subtitle {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #c5c5c5;
+}
+
+/* СЕТКА КАРТОЧЕК — три колонки по центру */
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* КАРТОЧКИ */
+
+
+.team-card__photo {
+  flex: 0 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;                 /* не сжимать колонку с фото */
+}
+.team-card__img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+.team-card__content {
+  flex: 1;                         /* растянуть на оставшееся место */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+/* Центральная карточка с акцентом */
+.team-card--center {
+  border: none;
+  box-shadow: 0 30px 30px rgba(197, 197, 197, 0.2);
+  position: relative;
+  padding-top: 40px;
+}
+
+.team-card__accent-bar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 295px;
+  height: 4px;
+  border-radius: 6px;
+  background: #de3c3c;
+}
+
+.team-card__name {
+  margin: 0 0 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.team-card__desc {
+  margin: 0 0 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #c5c5c5;
+}
+
+/* Линия + ссылка внизу карточки */
+.team-card__link {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(197, 197, 197, 0.2);
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #212121;
+  text-decoration: none;
+}
+
+.team-card__link--accent {
+  color: #de3c3c;
+  border-top-color: rgba(197, 197, 197, 0.5);
+}
+
+/* маленькая стрелка */
+.team-card__link-arrow {
+  width: 8px;
+  height: 10px;
+  border-left: 1px solid #212121;
+  border-top: 1px solid #212121;
+  transform: rotate(45deg);
+}
+
+.team-card__link-arrow--accent {
+  border-color: #de3c3c;
+}
+
+/* БОКОВЫЕ КАРТИНКИ С НАХЛЁСТОМ */
+.team-side-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;       /* стало фиксированное, заметно меньше */
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  z-index: 3;         /* чтобы были поверх фона/маски */
+}
+
+.team-side-image--left {
+  left: 20px;
+  top: 15%;
+  width: 260px;
+}
+
+.team-side-image--right {
+  right: 0px;
+  top: 80%;        /* больше 50% → ниже */
+}
+
+.team-extra-image {
+  position: absolute;
+  width: 140px;       /* размер, подберёшь */
+  height: auto;
+  object-fit: contain;
+  z-index: 3;         /* поверх подложки, но можно поменять */
+}
+
+/* верхняя справа */
+.team-extra-image--top-right {
+  top: 40px;          /* отступ сверху */
+  right: 40px;        /* отступ от правого края секции */
+}
+
+/* нижняя (чуть правее/левее — подбираешь) */
+.team-extra-image--bottom-right {
+  bottom: 360px;   /* как низко он будет — можешь подправить */
+  left: 40px;     /* теперь слева */
+  right: auto;    /* важно обнулить right, чтобы не мешался */
+  width: 90px;    /* делаем картинку меньше, было, например, 140px */
+}
+
+/* адаптив, если нужен */
+@media (max-width: 1200px) {
+  .team-side-image {
+    display: none; /* на узких экранах можно убрать картинки */
+  }
+
+  .team-panel {
+    padding: 32px 24px 40px;
+  }
+
+  .team-cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+.team-card__telegram {
+  display: inline-block;
+  margin-top: 6px;          /* расстояние от GitHub-ссылки */
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  color: #c5c5c5;           /* посерее, чтобы не спорила с основным акцентом */
+  text-decoration: none;
+}
+
+.team-card__telegram:hover {
+  text-decoration: underline; /* по желанию */
+}

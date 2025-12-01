@@ -1,0 +1,275 @@
+
+  /* ============ СЕКЦИЯ С КАРТОЧКАМИ + КРАСНЫЙ БЛОК ============ */
+
+  /* main-контент, который должен занять экран по высоте */
+  .page__features {
+    flex: 1;                    /* занять всё оставшееся место в .page */
+    display: flex;
+    align-items: center;        /* по вертикали по центру экрана */
+  }
+
+  .features-section {
+    width: 100%;
+  }
+
+  .features-section__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+ /* Колонка с карточками */
+.features-section__left {
+  flex: 0 0 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;          /* расстояние между карточками */
+  position: relative; /* чтобы сдвиги выглядели аккуратно */
+}
+
+/* 1-я карточка — без сдвига */
+.features-section__left .feature-card:nth-child(1) {
+  transform: translateX(0);
+}
+
+/* 2-я карточка — вправо */
+.features-section__left .feature-card:nth-child(2) {
+  transform: translateX(100px);  /* можно 50–60, если хочешь сильнее эффект */
+}
+
+/* 3-я карточка — немного влево */
+.features-section__left .feature-card:nth-child(3) {
+  transform: translateX(10px);  /* лёгкий сдвиг, чтобы не в линию с первой */
+}
+
+
+  /* Правая колонка (красный кадр) */
+  .features-section__right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .features-hero {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  /* ---------- КАРТОЧКИ СЛЕВА ---------- */
+
+
+.feature-card {
+  position: relative;
+  padding: 24px 32px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
+  width: 100%;
+  overflow: hidden;
+}
+
+
+  .feature-card--ghost {
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.02);
+  }
+
+  /* Красная карточка */
+.feature-card--primary {
+  background: #A8002C;
+  color: #ffffff;
+  box-shadow: 0 24px 60px rgba(148, 27, 63, 0.5);
+}
+
+
+.feature-card--decor > * {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Левый оранжевый овал */
+.feature-card--decor::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: -71px;
+  top: -94px;
+  background: #FFAA64;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+/* Правый красный крупный овал */
+.feature-card--decor::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -75px;   /* вместо left: 405px — логичнее от правого края */
+  top: -89px;
+  background: #C00000;
+  opacity: 0.4;
+  border-radius: 50%;
+}
+
+
+  .feature-card__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .feature-card__icon--ghost {
+    background: #fff5f5;
+  }
+
+  .feature-card__icon--primary {
+    background: radial-gradient(circle at 0 0, #fbbf24, #a8002c 60%);
+  }
+
+  .feature-card__title {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .feature-card__title--light {
+    color: #ffffff;
+  }
+
+  .feature-card__text {
+    margin: 0 0 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #64748b;
+  }
+
+  .feature-card__text--light {
+    color: #f9fafb;
+  }
+
+  /* ---------- ПРАВЫЙ КРАСНЫЙ БЛОК (как на картинке) ---------- */
+
+  .page-home__frame {
+    position: relative;
+    width: 100%;
+    max-width: 766px;
+    aspect-ratio: 766 / 886;
+  }
+
+  .page-home__card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .page-home__card-bg {
+    position: absolute;
+    inset: 0;
+    background: #a8002c;
+  }
+
+  .page-home__card-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    pointer-events: none;
+  }
+
+  .card-bottom__top-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    background: #ffffff;
+  }
+
+  .card-bottom__big-shape {
+    position: absolute;
+    top: 25px;
+    width: 180px;
+    height: 67px;
+    background: #ffffff;
+    border-radius: 40px;
+  }
+
+  .card-bottom__middle-strip {
+    position: absolute;
+    top: 75px;
+    width: 100%;
+    height: 15px;
+    background: #ffffff;
+  }
+
+  .card-bottom__small-strip {
+    position: absolute;
+    top: 103px;
+    width: 113px;
+    height: 9px;
+    background: #ffffff;
+  }
+
+  .page-home__images {
+    position: absolute;
+    inset: 0;
+  }
+
+  .page-home__img {
+    position: absolute;
+    object-fit: contain;
+  }
+
+  .page-home__img--analytics {
+    width: 460px;
+    height: 327px;
+    right: 20px;
+    top: 40px;
+  }
+
+.page-home__img--mobile {
+  position: absolute;
+  width: 568px;
+  height: 515px;
+  left: -100px;   /* вот здесь "выступание" влево */
+  bottom: 40px;  /* при необходимости можно подправить вверх/вниз */
+  object-fit: contain;
+}
+
+
+  @media (max-width: 1024px) {
+    .features-section__inner {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .features-section__left {
+      order: 2;
+    }
+
+    .features-section__right {
+      order: 1;
+      justify-content: center;
+    }
+
+    .features-hero {
+      max-width: 100%;
+    }
+  }

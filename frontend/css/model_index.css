@@ -1,0 +1,869 @@
+/* =========================
+   БАЗОВЫЕ НАСТРОЙКИ СТРАНИЦЫ
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body,
+.page {
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6; /* общий серый фон */
+  font-family: "Roboto", sans-serif;
+  color: #212121;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Обёртка-центрировщик */
+.app-container {
+  width: 100%;
+  max-width: 1252px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Общая секция (полотно) */
+.app-section {
+  position: relative;
+  padding: 20px 0 100px;
+  background: transparent;
+}
+
+/* =========================
+   ПОЛОТНО 1: АНАЛИЗ ТЕКСТОВ
+   ========================= */
+
+.app-section--analysis {
+  position: relative;
+  max-width: 1100px;
+  margin: 16px auto 80px;  /* центрируем блок */
+  background: #ffffff;     /* белая подложка */
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 30px 30px rgba(197, 197, 197, 0.2);
+  overflow: hidden;
+}
+
+/* Внутренние отступы у контента (анализ) */
+.app-section__content {
+  padding: 48px 56px 96px;
+}
+
+/* Волна снизу серой плошки */
+.app-section__wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  display: block;
+}
+
+/* Цвет волны (линия) */
+.app-section__wave path {
+  fill: none;
+  stroke: #8b1f3f;
+  stroke-width: 4;
+}
+
+/* Заголовок страницы (общий верхний текст) */
+.header {
+  margin-bottom: 8px;
+}
+
+/* Центруем заголовок и подзаголовок */
+.app-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 32px;
+}
+
+.app-hero__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: #111827;
+}
+
+.app-hero__subtitle {
+  font-size: 14px;
+  line-height: 24px;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+/* Блок анализа по центру */
+.app-block {
+  margin-bottom: 40px;
+}
+
+.app-block--analyze {
+  display: flex;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.app-block__left,
+.app-block__right {
+  width: 100%;
+}
+
+/* Заголовки блоков */
+.app-block__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #212121;
+  margin: 0 0 8px;
+}
+
+.app-block__text,
+.app-block__subtitle {
+  font-size: 14px;
+  line-height: 24px;
+  color: #6b6b6b;
+  margin: 0 0 16px;
+}
+
+/* Подпись под формой / поясняющий текст */
+.app-block__note {
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  color: #c5c5c5;
+  margin-top: 10px;
+}
+
+/* =========================
+   ЗАГРУЗКА ФАЙЛОВ
+   ========================= */
+
+.app-upload {
+  margin-bottom: 16px;
+}
+
+.app-upload__label {
+  display: block;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px dashed rgba(168, 0, 44, 0.4);
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-upload__label:hover {
+  border-color: #a8002c;
+  box-shadow: 0 0 0 1px rgba(168, 0, 44, 0.08);
+}
+
+.app-upload__title {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 4px;
+}
+
+.app-upload__hint {
+  display: block;
+  font-size: 12px;
+  color: #c5c5c5;
+}
+
+.app-upload__input {
+  display: none;
+}
+
+/* =========================
+   ПОЛЯ / SELECT
+   ========================= */
+
+.app-field {
+  margin-bottom: 16px;
+}
+
+.app-field__label {
+  display: block;
+  font-size: 13px;
+  color: #6b6b6b;
+  margin-bottom: 6px;
+}
+
+.app-field__select {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #212121;
+  background: #ffffff;
+}
+
+/* =========================
+   КНОПКИ
+   ========================= */
+
+.app-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 10px 18px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-btn--primary {
+  background: #a8002c;
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(168, 0, 44, 0.2);
+}
+
+.app-btn--primary:hover {
+  background: #7b001f;
+}
+
+.app-btn--outline {
+  background: #ffffff;
+  color: #a8002c;
+  border-color: #a8002c;
+}
+
+.app-btn--outline:hover {
+  background: #fff4f7;
+}
+
+.app-btn--center {
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================
+   КАРТОЧКИ
+   ========================= */
+
+.app-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(219, 219, 219, 0.7);
+  padding: 20px 20px 18px;
+}
+
+.app-card__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.app-card__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #212121;
+  margin: 0;
+}
+
+.app-card__tag {
+  font-size: 11px;
+  color: #c5c5c5;
+}
+
+/* =========================
+   ТАБЛИЦА
+   ========================= */
+
+.app-table-wrapper {
+  max-height: 220px;
+  overflow: auto;
+  border-radius: 6px;
+  border: 1px solid #f0f0f0;
+}
+
+.app-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.app-table thead {
+  background: #fafafa;
+}
+
+.app-table th,
+.app-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.app-table th {
+  font-weight: 500;
+  color: #6b6b6b;
+}
+
+.app-table td {
+  color: #212121;
+}
+
+/* =========================
+   БЛОК ГРАФИКА
+   ========================= */
+/* Карточка с графиком — чуть больше воздух + выравнивание */
+.app-card--chart {
+  margin-top: 24px;
+}
+
+.app-card--chart .app-card__header {
+  text-align: center;
+}
+
+.app-card--chart .app-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.app-card--chart .app-card__subtitle {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Контейнер с гистограммой: три столбика рядом, по центру */
+.app-chart-placeholder {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 32px;
+  margin-top: 18px;
+  padding: 0 12px;
+  max-width: 680px;
+  height: 230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Один столбик (колонка) */
+.app-chart-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 0;
+  max-width: 160px;
+}
+
+/* Область, в которой растёт заливка */
+/* Один столбик */
+.app-chart-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 0;
+  max-width: 160px;
+}
+
+/* Область, где растёт заливка */
+.app-chart-bar__column {
+  position: relative;
+  width: 100%;
+  max-width: 64px;
+  height: 160px;
+  border-radius: 999px;
+  background: #f3f4ff;
+  overflow: hidden;
+}
+
+.app-chart-bar__fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0%;
+  transition: height 0.6s ease-out;
+  opacity: 0.8;
+}
+
+.app-chart-bar__value {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  text-align: center;
+  min-height: 22px;
+}
+
+.app-chart-bar__label-short {
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  color: #4b5563;
+}
+
+/* Цвета */
+.app-chart-bar--neg .app-chart-bar__fill {
+  background:  #ffd66b;
+}
+.app-chart-bar--neu .app-chart-bar__fill {
+  background:  #7bd88f;
+}
+.app-chart-bar--pos .app-chart-bar__fill {
+  background: #ff7676;
+}
+
+/* Легенда под графиком */
+.app-chart-legend {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-chart-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.app-chart-legend__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Цветные точки под те же цвета, что и столбики */
+.app-chart-legend__dot--neg {
+  background: #ffd66b;
+}
+.app-chart-legend__dot--neu {
+  background: #bd88f;
+}
+.app-chart-legend__dot--pos {
+  background: #7ff7676;
+}
+
+
+
+/* Блок с контролами источника */
+app-sources-controls {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Подпись "Источник:" */
+.app-sources-label {
+  font-size: 13px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.app-sources-select-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* Сам селект, стилизуем как кнопку */
+.app-sources-select {
+  min-width: 220px;
+  padding: 8px 40px 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #c4d0ff;
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.08s ease,
+    background 0.15s ease;
+}
+
+.app-sources-select:hover {
+  border-color: #93c5fd;
+  background: linear-gradient(135deg, #e0edff, #c7d2fe);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.12);
+}
+
+.app-sources-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+/* Стрелочка справа */
+.app-sources-select-wrap::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #4b5563;
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  .app-sources-controls {
+    align-items: flex-start;
+  }
+
+  .app-sources-select {
+    min-width: 100%;
+  }
+
+  .app-sources-select-wrap {
+    flex: 1 1 100%;
+  }
+}
+
+.app-chart-placeholder--sources {
+  max-width: 420px;
+  height: 210px;
+  margin-top: 16px;
+}
+
+
+/* =========================
+   ПОЛОТНО 2: ОЦЕНКА КАЧЕСТВА
+   ========================= */
+
+.app-section--metrics {
+  position: relative;
+  max-width: 1100px;
+  margin: 24px auto 80px;
+  background: #ffffff;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 30px 30px rgba(197, 197, 197, 0.2);
+  overflow: visible; /* важно: позволяем картинке торчать наружу */
+}
+
+
+/* Внутренние отступы (метрики) */
+.app-section__content--metrics {
+  padding: 48px 56px 64px;
+}
+
+/* Верхняя часть секции "Оценка качества":
+   текст по центру, картинка снизу справа */
+/* Верхняя часть секции "Оценка качества":
+   текст по центру, картинка снизу справа, вылезает за рамку */
+.metrics-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 90px; /* запас места, чтобы картинка не налезала на форму */
+}
+
+/* Текст как был: по центру */
+.metrics-hero__text {
+  max-width: 640px;
+  text-align: center;
+}
+
+/* Картинка "отпущена" вниз и вправо, вылезает наружу */
+.metrics-hero__image {
+  position: absolute;
+  right: -50px;   /* вылазит за правую границу белого блока */
+  bottom: -270px;  /* опускаем ниже нижней границы */
+}
+
+.metrics-hero__image img {
+  max-width: 450px;
+  height: auto;
+  display: block;
+}
+
+
+.app-metrics-grid {
+  margin-top: 0;        /* на всякий случай обнуляем, если где-то стоял отступ */
+}
+
+/* Блок с информацией — по центру */
+.metrics-hero__text {
+  max-width: 640px;
+  text-align: center;
+}
+
+.metrics-hero__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px;
+}
+
+.metrics-hero__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+/* =========================
+   GRID: ФОРМА СЛЕВА, РЕЗУЛЬТАТЫ СПРАВА
+   ========================= */
+
+.app-metrics-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.app-metrics-left,
+.app-metrics-right {
+  width: 100%;
+}
+
+/* Блок метрик */
+.app-block--metrics {
+  margin-top: 32px;
+}
+
+.app-block__header-line {
+  margin-bottom: 16px;
+}
+
+/* =========================
+   METRICS SUMMARY
+   ========================= */
+
+.app-card--metrics-summary {
+  margin-bottom: 16px;
+}
+
+.app-metrics-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.app-metrics-main__value {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-metrics-main__label {
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
+.app-metrics-main__number {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #a8002c;
+}
+
+.app-metrics-main__details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b6b6b;
+  text-align: right;
+}
+
+/* =========================
+   CONFUSION MATRIX
+   ========================= */
+
+.app-confusion {
+  margin-top: 6px;
+}
+
+.app-table--confusion th,
+.app-table--confusion td {
+  text-align: center;
+}
+
+.app-table--confusion thead th:first-child {
+  background: transparent;
+}
+
+/* =========================
+   АДАПТИВ
+   ========================= */
+
+/* Средние экраны */
+@media (max-width: 992px) {
+  .app-section__content,
+  .app-section__content--metrics {
+    padding: 32px 24px 64px;
+  }
+
+  .app-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-block--analyze {
+    max-width: 100%;
+  }
+}
+
+/* Планшеты / узкие экраны */
+@media (max-width: 900px) {
+  .metrics-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .metrics-hero__image {
+    justify-content: center;
+  }
+
+  .metrics-hero__image img {
+    max-width: 200px;
+  }
+
+  .app-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Мобильные */
+@media (max-width: 600px) {
+  .app-hero__title {
+    font-size: 24px;
+  }
+
+  .app-section__content,
+  .app-section__content--metrics {
+    padding: 24px 16px 56px;
+  }
+
+  .metrics-hero__title {
+    font-size: 22px;
+  }
+
+  .metrics-hero__subtitle {
+    font-size: 13px;
+  }
+
+  .app-field__select {
+    font-size: 13px;
+  }
+}
+
+
+/* Секция с декором Fly + Line */
+.flyline-section {
+  padding-top: 0px !important;
+  margin-top: -10 !important;
+}
+
+/* Контейнер по ширине как у командной панели */
+/* Базовый стиль для обоих изображений */
+.flyline-img {
+  position: absolute;
+  pointer-events: none;
+  display: block;
+}
+
+/* Line — подложка справа сверху */
+.flyline-img--line {
+  top: 200px;
+  right: 40px;
+  width: 150px;              /* подбери визуально */
+  height: auto;
+  z-index: 1;                /* ниже Fly */
+}
+
+/* Fly — поверх Line, чуть смещённая */
+.flyline-img--fly {
+  top: 280px;                    /* немного выше линии */
+  right: 80px;               /* немного левее линии */
+  width: 100px;              /* поменьше */
+  height: auto;
+  z-index: 2;                /* выше Line */
+}
+
+/* при желании можно спрятать декор на мобилках */
+@media (max-width: 768px) {
+  .flyline-container {
+    min-height: 120px;
+  }
+
+  .flyline-img--line,
+  .flyline-img--fly {
+    width: 100px;
+    right: 16px;
+  }
+}
+
+
+.flyline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+/* Обертка для стека слева */
+.flyline-stack-left {
+  position: absolute;
+  top: 40px;              /* подними/опусти стек */
+  left: 0;
+  transform: translateX(-35%); /* насколько "торчит" из блока */
+}
+
+/* Общий стиль картинок стека */
+.flyline-stack-img {
+  position: absolute;
+  display: block;
+  max-width: 400px;       /* размер стека */
+}
+
+/* Задняя картинка */
+.flyline-stack-img--back {
+  top: 30px;
+  left: 0;
+
+}
+
+/* Передняя сверху */
+.flyline-stack-img--front {
+  top: -10px;     /* немного выше, чтобы сильнее налазила */
+  left: 50px;     /* чуть вправо */
+  z-index: 999;   /* ПРЯМО СВЕРХУ всего */
+}

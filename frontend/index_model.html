@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Моя страница</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/home_1.css">
+    <link rel="stylesheet" href="./css/model_index.css">
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <div class="logo-block">
+      <a href="index.html" class="header-back-array">
+        <img src="./img/back_arrow.png" alt="Вернуться на главную" />
+      </a>
+      <div class="logo-text">
+        Проект трека<br />
+        Правительства Москвы
+      </div>
+    </div>
+
+    <nav class="nav">
+        <a href="#analysis">Анализ</a>
+        <a href="#metrics">Оценка</a>
+      <a href="index.html#about">О сервисе</a>
+      <a href="index.html#model">Модель</a>
+      <a href="index.html#contacts">Контакты</a>
+      <button class="btn-login">Войти</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="flyline-section">
+  <div class="flyline-container">
+    <img
+      src="./img/line1.png"
+      alt=""
+      class="flyline-img flyline-img--line"
+    />
+    <img
+      src="./img/fly.png"
+      alt=""
+      class="flyline-img flyline-img--fly"
+    />
+  </div>
+
+         <div class="flyline-container">
+      <!-- Левый стек из двух картинок -->
+      <div class="flyline-stack-left">
+        <img
+          src="./img/3p.png"
+          alt="Верхняя левая задняя"
+          class="flyline-stack-img flyline-stack-img--back"
+        />
+        <img
+          src="./img/boy.png"
+          alt="Верхняя левая передняя"
+          class="flyline-stack-img flyline-stack-img--front"
+        />
+      </div>
+</section>
+
+
+    <section class="app-section app-section--analysis" id="analysis">
+    <div class="app-container app-section__content">
+      <!-- Заголовок страницы -->
+      <header class="app-hero">
+        <h1 class="app-hero__title">
+          Анализ эмоциональной тональности текстов
+        </h1>
+        <p class="app-hero__subtitle">
+          Модель распознаёт тональность текста и возвращает метку:
+            <p class="app-hero__subtitle">
+            <p><strong>2 — отрицательная</strong>,
+           <strong>1 — положительная</strong>,
+          <strong>0 — нейтральная</strong></p>
+            </p>
+      </header>
+
+
+      <!-- БЛОК 1: Анализ текстов -->
+      <section class="app-block app-block--analyze">
+        <div class="app-block__left">
+          <p class="app-block__text">
+            Загрузите CSV-файл с текстами. Интерфейс вернёт размеченный файл
+            и визуализацию распределения тональностей.
+          </p>
+
+          <div class="app-upload">
+            <label class="app-upload__label">
+              <span class="app-upload__title">Файл с текстами (CSV)</span>
+              <span class="app-upload__hint">
+                Требуется документ с колонками с <code>ID, text, src</code>).
+              </span>
+              <input
+                type="file"
+                class="app-upload__input"
+                id="texts-file-input"
+                accept=".csv"
+              /><span class="app-upload__filename" id="texts-file-name">
+                Файл не выбран
+            </span>
+
+            </label>
+          </div>
+
+          <button class="app-btn app-btn--primary app-btn--center" id="run-analysis-btn">
+            Запустить анализ
+          </button>
+
+          <p class="app-block__note">
+            После анализа вы сможете скачать CSV с предсказанными метками
+            и посмотреть визуализацию.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Волна теперь прямо у секции -->
+    <svg
+      class="app-section__wave"
+      viewBox="0 0 1440 90"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,20 1440,40 L1440,90 L0,90 Z"/>
+    </svg>
+  </section>
+  </main>
+</div>
+<div class="app-block__right hidden" id="results-block">
+  <!-- Карточка с таблицей -->
+  <div class="app-card app-card--table">
+    <div class="app-card__header">
+      <h3 class="app-card__title">Предпросмотр результатов</h3>
+      <span class="app-card__tag">первые 10 строк</span>
+    </div>
+
+    <div class="app-table-wrapper">
+      <table class="app-table" id="results-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>label</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- сюда JS вставит строки -->
+        </tbody>
+      </table>
+    </div>
+
+    <button
+      class="app-btn app-btn--outline app-card__download"
+      id="download-btn"
+    >
+      Скачать результаты (CSV)
+    </button>
+  </div>
+
+    <!-- Карточка с гистограммой распределения классов -->
+<!-- Карточка с гистограммой распределения классов -->
+<!-- Карточка с гистограммой распределения классов -->
+<div class="app-card app-card--chart">
+  <div class="app-card__header">
+    <h3 class="app-card__title">Распределение тональностей</h3>
+    <p class="app-card__subtitle">
+      Доли предсказаний по классам в загруженном файле
+    </p>
+  </div>
+
+  <div class="app-chart-placeholder">
+    <!-- Класс 0 -->
+    <div class="app-chart-bar app-chart-bar--neg" id="chart-bar-0" title="0 — нейтральная">
+      <div class="app-chart-bar__column">
+        <div class="app-chart-bar__fill"></div>
+      </div>
+      <div class="app-chart-bar__value" id="chart-count-0">0</div>
+      <div class="app-chart-bar__label-short">0</div>
+    </div>
+
+    <!-- Класс 1 -->
+    <div class="app-chart-bar app-chart-bar--neu" id="chart-bar-1" title="1 — положительная">
+      <div class="app-chart-bar__column">
+        <div class="app-chart-bar__fill"></div>
+      </div>
+      <div class="app-chart-bar__value" id="chart-count-1">0</div>
+      <div class="app-chart-bar__label-short">1</div>
+    </div>
+
+    <!-- Класс 2 -->
+    <div class="app-chart-bar app-chart-bar--pos" id="chart-bar-2" title="2 — негативная">
+      <div class="app-chart-bar__column">
+        <div class="app-chart-bar__fill"></div>
+      </div>
+      <div class="app-chart-bar__value" id="chart-count-2">0</div>
+      <div class="app-chart-bar__label-short">2</div>
+    </div>
+  </div>
+
+  <!-- Легенда под графиком -->
+  <div class="app-chart-legend">
+    <div class="app-chart-legend__item">
+      <span class="app-chart-legend__dot app-chart-legend__dot--neg"></span>
+      <span>0 — нейтральная</span>
+    </div>
+    <div class="app-chart-legend__item">
+      <span class="app-chart-legend__dot app-chart-legend__dot--neu"></span>
+      <span>1 — положительная</span>
+    </div>
+    <div class="app-chart-legend__item">
+      <span class="app-chart-legend__dot app-chart-legend__dot--pos"></span>
+      <span>2 — негативная</span>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Карточка: график распределения тональностей по источникам -->
+<div class="app-card app-card--chart app-card--sources">
+  <div class="app-card__header">
+    <h3 class="app-card__title">Тональности по источнику</h3>
+    <p class="app-card__subtitle">
+      Выберите источник (src), чтобы посмотреть распределение классов
+    </p>
+  </div>
+
+<div class="app-sources-controls">
+  <label for="src-select" class="app-sources-label">Источник:</label>
+
+  <div class="app-sources-select-wrap">
+    <select id="src-select" class="app-sources-select">
+      <option value="">— нет данных —</option>
+    </select>
+  </div>
+</div>
+
+
+  <!-- Вертикальный график как и сверху, но для выбранного src -->
+  <div class="app-chart-placeholder app-chart-placeholder--sources">
+    <div class="app-chart-bar app-chart-bar--neg" id="src-bar-0">
+      <div class="app-chart-bar__column">
+        <div class="app-chart-bar__fill"></div>
+      </div>
+      <div class="app-chart-bar__value" id="src-count-0">0</div>
+      <div class="app-chart-bar__label-short">0</div>
+    </div>
+
+    <div class="app-chart-bar app-chart-bar--neu" id="src-bar-1">
+      <div class="app-chart-bar__column">
+        <div class="app-chart-bar__fill"></div>
+      </div>
+      <div class="app-chart-bar__value" id="src-count-1">0</div>
+      <div class="app-chart-bar__label-short">1</div>
+    </div>
+
+    <div class="app-chart-bar app-chart-bar--pos" id="src-bar-2">
+      <div class="app-chart-bar__column">
+        <div class="app-chart-bar__fill"></div>
+      </div>
+      <div class="app-chart-bar__value" id="src-count-2">0</div>
+      <div class="app-chart-bar__label-short">2</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+      <section class="app-between">
+
+<!--            <img src="./img/1p.png" alt="Левая картинка" class="app-between__img app-between__img&#45;&#45;left"/>-->
+<!--          <img src="./img/2p.png" alt="Левая картинка" class="app-between__img app-between__img&#45;&#45;right"/>-->
+<!--          <img src="./img/girl.png" alt="Оверлей" class="app-between__img app-between__img&#45;&#45;right-overlay"/>-->
+
+
+      </section>
+<main>
+<!-- БЛОК 2: Оценка модели по macro-F1 -->
+<section class="app-section app-section--metrics" id="metrics">
+  <div class="app-container app-section__content app-section__content--metrics">
+
+    <!-- Верх: слева текст, справа картинка -->
+      <div class="app-metrics-left">
+  <!-- Файл с предсказаниями модели -->
+  <div class="app-upload">
+    <label class="app-upload__label">
+      <span class="app-upload__title">Файл с предсказаниями модели (CSV)</span>
+      <span class="app-upload__hint">
+        Формат: <code>ID,label</code>, такой файл вы получили на первом шаге.
+      </span>
+      <input
+        type="file"
+        class="app-upload__input"
+        id="pred-file-input"
+        accept=".csv"
+      >
+      <span class="app-upload__filename" id="pred-file-name">
+        Файл не выбран
+      </span>
+    </label>
+  </div>
+
+  <!-- Файл с истинными метками -->
+  <div class="app-upload">
+    <label class="app-upload__label">
+      <span class="app-upload__title">Файл с истинными метками (CSV)</span>
+      <span class="app-upload__hint">
+        Формат: <code>ID,label</code>, где <code>label ∈ {0,1,2}</code>.
+      </span>
+      <input
+        type="file"
+        class="app-upload__input"
+        id="val-file-input"
+        accept=".csv"
+      >
+      <span class="app-upload__filename" id="val-file-name">
+        Файл не выбран
+      </span>
+    </label>
+  </div>
+
+  <button class="app-btn app-btn--primary" id="calc-macro-btn">
+    Посчитать macro-F1
+  </button>
+
+  <p class="app-block__note">
+    Для оценки macro-F1 берём пересечение по ID между предсказаниями модели
+    и истинными метками и считаем метрики по трём классам.
+  </p>
+</div>
+
+
+
+
+
+      <!-- Правая часть: метрики + confusion matrix (по умолчанию скрыта) -->
+      <div class="app-metrics-right hidden" id="metrics-results">
+        <div class="app-card app-card--metrics-summary">
+          <h3 class="app-card__title">Итоговые метрики</h3>
+          <div class="app-metrics-main">
+            <div class="app-metrics-main__value">
+              <span class="app-metrics-main__label">macro-F1</span>
+              <span class="app-metrics-main__number" id="macro-f1-value">0.84</span>
+            </div>
+            <div class="app-metrics-main__details">
+              <span id="accuracy-value">Accuracy: 0.88</span>
+              <span id="precision-value">Precision (macro): 0.83</span>
+              <span id="recall-value">Recall (macro): 0.85</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card app-card--confusion">
+          <h3 class="app-card__title">Confusion matrix</h3>
+          <div class="app-confusion">
+            <table class="app-table app-table--confusion" id="confusion-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Pred 0</th>
+                  <th>Pred 1</th>
+                  <th>Pred 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>True 0</th>
+                  <td>120</td>
+                  <td>15</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <th>True 1</th>
+                  <td>10</td>
+                  <td>140</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <th>True 2</th>
+                  <td>3</td>
+                  <td>12</td>
+                  <td>110</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div> <!-- /app-metrics-right -->
+    </div> <!-- /app-metrics-grid -->
+
+  </div> <!-- /app-container -->
+</section>
+
+  </main>
+     <footer class="footer">
+      © 2025 · Проект трека Правительства Москвы · MoodWare
+    </footer>
+  <script src="./js/index_model.js"></script>
+</body>
+</html>

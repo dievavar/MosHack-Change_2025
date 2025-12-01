@@ -1,0 +1,217 @@
+
+    /* ---------- HEADER ---------- */
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+.header-back-array {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;      /* было 55px */
+  height: 70px;     /* было 55px */
+  border-radius: 50%;
+  background: #f6f6f6;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.header-back-array img {
+  width: 40px;   /* было 50px, но можно подбирать */
+  height: auto;  /* чтобы не искажалось */
+  object-fit: contain;
+}
+
+
+    .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 120px;
+    }
+
+    .logo-block img {
+      width: 70px;
+      height: 83px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: #000;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-left: auto;
+    }
+
+    .nav a {
+      font-size: 13px;
+      font-weight: 300;
+      color: #414141;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .nav a:hover {
+      opacity: 1;
+      color: #a8002c;
+    }
+
+    .btn-login {
+      padding: 14px 24px;
+      background: #a8002c;
+      border-radius: 4px;
+      border: none;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn-login:hover {
+      background: #c00035;
+      transform: translateY(-1px);
+    }
+
+    /* ---------- MAIN / HERO ---------- */
+
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      padding: 40px 56px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 520px;
+    }
+
+    .hero-title {
+      font-size: 35px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      color: #111827;
+      margin: 0 0 8px 0;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-title {
+        white-space: nowrap;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #4b5563;
+      margin-bottom: 24px;
+      margin: 0 0 16px 0;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      text-decoration: none;
+      display: inline-flex;
+      padding: 12px 20px;
+      background: #a8002c;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn-primary:hover {
+      background: #c00035;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      padding: 12px 20px;
+      background: transparent;
+      color: #a8002c;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+    }
+
+    .btn-outline:hover {
+      background: #fff1f5;
+      border-color: #fecaca;
+    }
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:visited {
+  text-decoration: none;
+}
+   .hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 488px;
+}
+
+.hero-image-main {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image-review {
+  position: absolute;
+  width: 219px;
+  height: 118px;
+  left: 10px;
+  top: -20px;
+  object-fit: cover;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #9ca3af;
+      text-align: center;
+    }
