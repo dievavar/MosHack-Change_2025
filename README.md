@@ -1,6 +1,18 @@
 
 # MosHack-Change 2025 — Анализатор тональности отзывов
 
+<div align="center">
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com)
+[![Transformers](https://img.shields.io/badge/🤗_Transformers-4.30+-yellow.svg)](https://huggingface.co/transformers)
+[![Hackathon](https://img.shields.io/badge/Hackathon-Hack%26Change%2025-orange.svg)](https://hackchange.ru)
+
+*Проект хакатона Hack&Change 2025*
+
+</div>
+
+
 ## Постановка задачи
 
 Проект разработан в рамках хакатона Hack&Change 2025.  
