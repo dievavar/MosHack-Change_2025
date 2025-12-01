@@ -11,7 +11,7 @@
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3+-blue.svg)](https://scikit-learn.org)
 [![Hackathon](https://img.shields.io/badge/Hackathon-Hack%26Change%2025-purple.svg)](https://hackchange.ru)
 
-*Проект хакатона Hack&Change 2025*
+*Проект хакатона Hack&Change 2025 Правительства Москвы*
 
 </div>
 
