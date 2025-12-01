@@ -6,7 +6,10 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com)
 [![Transformers](https://img.shields.io/badge/🤗_Transformers-4.30+-yellow.svg)](https://huggingface.co/transformers)
-[![Hackathon](https://img.shields.io/badge/Hackathon-Hack%26Change%2025-orange.svg)](https://hackchange.ru)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3+-blue.svg)](https://scikit-learn.org)
+[![Hackathon](https://img.shields.io/badge/Hackathon-Hack%26Change%2025-purple.svg)](https://hackchange.ru)
 
 *Проект хакатона Hack&Change 2025*
 
