@@ -51,7 +51,7 @@ https://hub.mos.ru/solmath/moshack-change_2025
 - весь backend и frontend.
 
 ### Созданный прототип в фигме  
-https://www.figma.com/design/Jn1VWKOEAtMGraYBb4I0Uq/Hostus-Pocus?node-id=0-1&t=9ks20lZBQVufTpEp-1
+[https://www.figma.com/design/Jn1VWKOEAtMGraYBb4I0Uq/Hostus-Pocus?node-id=0-1&t=9ks20lZBQVufTpEp-1](https://www.figma.com/design/Jn1VWKOEAtMGraYBb4I0Uq/Hostus-Pocus?node-id=0-1&t=0YZGNLWrb6wN0OuS-1)
 
 ---
 
