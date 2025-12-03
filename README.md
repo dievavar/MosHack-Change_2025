@@ -145,7 +145,7 @@ https://hub.mos.ru/solmath/moshack-change_2025
 SentimentAnalysis/
 ├── backend/
 │   ├── model/
-│   ├── app_bert.py
+│   ├── app.py
 │   └── preprocess_test.py
 │
 ├── frontend/
